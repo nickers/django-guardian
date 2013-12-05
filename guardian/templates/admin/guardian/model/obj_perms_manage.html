@@ -40,7 +40,7 @@
                     <tr>
                         <th>{% trans "User" %}</th>
                         {% for perm in model_perms %}
-                        <th>{{ perm.name }}</th>
+                        <th>{% trans perm.name %}</th>
                         {% endfor %}
                         <th>{% trans "Action" %}</th>
                     </tr>
@@ -94,7 +94,7 @@
                     <tr>
                         <th>{% trans "Group" %}</th>
                         {% for perm in model_perms %}
-                        <th>{{ perm.name }}</th>
+                        <th>{% trans perm.name %}</th>
                         {% endfor %}
                         <th>{% trans "Action" %}</th>            
                     </tr>
