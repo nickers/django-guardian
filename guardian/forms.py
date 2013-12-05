@@ -60,7 +60,7 @@ class BaseObjectPermissionsForm(forms.Form):
         list of tuples ``(codename, name)`` for each ``Permission`` instance
         for the managed object.
         """
-        choices = [(p.codename, p.name) for p in get_perms_for_model(self.obj)]
+        choices = [(p.codename, _(p.name)) for p in get_perms_for_model(self.obj)]
         return choices
 
     def get_obj_perms_field_initial(self):
